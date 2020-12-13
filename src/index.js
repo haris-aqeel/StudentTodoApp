@@ -1,6 +1,5 @@
 // Built In Methods
 const express = require('express');
-const mongoose = require('mongoose');
 const app = express();
 require('./database/connection')
 app.use(express.json());
