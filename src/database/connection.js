@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
-
-mongoose.connect("mongodb+srv://root:root@studentdatabase.rjcic.mongodb.net/test?retryWrites=true&w=majority",{
+const dotenv = require('dotenv');
+dotenv.config();
+mongoose.connect(`mongodb+srv://root:${process.env.PASSWORD}@studentdatabase.rjcic.mongodb.net/test?retryWrites=true&w=majority`,{
     useCreateIndex: true,
     useFindAndModify: true,
     useNewUrlParser: true,
