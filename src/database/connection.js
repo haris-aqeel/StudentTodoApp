@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-// dotenv.config();
-mongoose.connect(`mongodb+srv://root:${process.env.PASSWORD}@studentdatabase.rjcic.mongodb.net/test`,{
+dotenv.config();
+mongoose.connect(process.env.MONGODB_URI,{
     useCreateIndex: true,
-    useFindAndModify: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(()=> {
